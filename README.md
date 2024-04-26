@@ -1,1 +1,1 @@
-# PoLua
+# A Miniature Game Engine
