@@ -21,7 +21,6 @@ Raycast = {
 
             self.rb:SetPosition(Vector2(newPosX, newPosY))
             self.rb:SetRotation(newRotation)
-
             coroutine.yield() -- Yield to allow smooth transition over the duration
         end
 
@@ -38,8 +37,8 @@ Raycast = {
             local resultActor = result.actor
             if resultActor:GetComponent("Magnet") ~= nil then
                 if isRed == true then
-                    if resultActor:GetComponent("SpriteRenderer").sprite == "box2" and redActor:GetComponent("Magnet").active == true then
-                        local distance = Vector2:Distance(self.rb:GetPosition(), results[1].actor:GetComponent("Rigidbody"):GetPosition()) - 0.5
+                    if resultActor:GetComponent("SpriteRenderer").sprite == "box2" and resultActor:GetComponent("Magnet").active == true then
+                        local distance = Vector2.Distance(self.rb:GetPosition(), results[1].actor:GetComponent("Rigidbody"):GetPosition()) - 0.5
                         local posX = self.rb:GetPosition().x + direc:__mul(distance).x
                         local posY = self.rb:GetPosition().y + direc:__mul(distance).y
                         local rotation = self.rb:GetRotation()
@@ -52,8 +51,8 @@ Raycast = {
                     end
                 end
                 if isRed == false then
-                    if resultActor:GetComponent("SpriteRenderer").sprite == "box1" and redActor:GetComponent("Magnet").active == true then
-                        local distance = Vector2:Distance(self.rb:GetPosition(), results[1].actor:GetComponent("Rigidbody"):GetPosition()) - 0.5
+                    if resultActor:GetComponent("SpriteRenderer").sprite == "box1" and resultActor:GetComponent("Magnet").active == true then
+                        local distance = Vector2.Distance(self.rb:GetPosition(), results[1].actor:GetComponent("Rigidbody"):GetPosition()) - 0.5
                         local posX = self.rb:GetPosition().x + direc:__mul(distance).x
                         local posY = self.rb:GetPosition().y + direc:__mul(distance).y
                         local rotation = self.rb:GetRotation()
@@ -80,20 +79,20 @@ Raycast = {
 
         local status = self.actor:GetComponent("KeyboardControl").status
         if status == 0 then
-            self:RaycastByDirecAndColor(self, 1, 0, true)
-            self:RaycastByDirecAndColor(self, -1, 0, false)
+            self:RaycastByDirecAndColor(1, 0, true)
+            self:RaycastByDirecAndColor(-1, 0, false)
         end
         if status == 1 then
-            self:RaycastByDirecAndColor(self, 0, 1, true)
-            self:RaycastByDirecAndColor(self, 0, -1, false)
+            self:RaycastByDirecAndColor(0, 1, true)
+            self:RaycastByDirecAndColor(0, -1, false)
         end
         if status == 2 then
-            self:RaycastByDirecAndColor(self, -1, 0, true)
-            self:RaycastByDirecAndColor(self, 1, 0, false)
+            self:RaycastByDirecAndColor(-1, 0, true)
+            self:RaycastByDirecAndColor(1, 0, false)
         end
         if status == 3 then
-            self:RaycastByDirecAndColor(self, 0, -1, true)
-            self:RaycastByDirecAndColor(self, 0, 1, false)
+            self:RaycastByDirecAndColor(0, -1, true)
+            self:RaycastByDirecAndColor(0, 1, false)
         end
     end
 }
