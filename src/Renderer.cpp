@@ -131,7 +131,7 @@ void Renderer::RenderPixels()
 	draw_pixel_requests.clear();
 }
 
-glm::vec2 Renderer::WorldToScreen(glm::vec2 position)
+glm::vec2 Renderer::WorldToScreen(b2Vec2 position)
 {
 	glm::vec2 result;
 

@@ -5,6 +5,7 @@
 #include "SDL.h"
 #include "Helper.h"
 #include "glm/glm.hpp"
+#include "box2d/box2d.h"
 
 #include "RenderRequests.h"
 
@@ -28,7 +29,7 @@ public:
 	static void RenderImages();
 	static void RenderPixels();
 
-	static glm::vec2 WorldToScreen(glm::vec2 position);
+	static glm::vec2 WorldToScreen(b2Vec2 position);
 
 	Renderer() {
 		// Only need Config initialized
