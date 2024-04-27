@@ -186,6 +186,14 @@ float Rigidbody::GetRotation()
 	return body->GetAngle() * (180.0f / b2_pi);
 }
 
+float Rigidbody::GetWidth() {
+	return width;
+}
+
+float Rigidbody::GetHeight() {
+	return height;
+}
+
 b2Vec2 Rigidbody::GetVelocity()
 {
 	return body->GetLinearVelocity();

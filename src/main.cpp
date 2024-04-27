@@ -199,6 +199,8 @@ int main(int argc, char* argv[])
 		// Getters
 		.addFunction("GetPosition", &Rigidbody::GetPosition)
 		.addFunction("GetRotation", &Rigidbody::GetRotation)
+		.addFunction("GetWidth", &Rigidbody::GetWidth)
+		.addFunction("GetHeight", &Rigidbody::GetHeight)
 		.addFunction("GetVelocity", &Rigidbody::GetVelocity)
 		.addFunction("GetAngularVelocity", &Rigidbody::GetAngularVelocity)
 		.addFunction("GetGravityScale", &Rigidbody::GetGravityScale)

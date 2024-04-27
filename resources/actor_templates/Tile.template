@@ -1,0 +1,21 @@
+{
+	"name": "tile",
+	"components": {
+		"1": {
+			"type": "Rigidbody",
+			"body_type": "static",
+			"x": -3.5,
+			"y": -1,
+			"width": 0.5,
+			"height": 0.5,
+			"has_trigger": false
+		},
+		"2": {
+			"r": 0,
+			"g": 0,
+			"b": 0,
+			"type": "SpriteRenderer",
+			"sprite": "box2"
+		}
+	}
+}

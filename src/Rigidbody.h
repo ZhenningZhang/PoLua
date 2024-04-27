@@ -61,6 +61,8 @@ public:
 	// Get
 	b2Vec2 GetPosition();
 	float GetRotation();
+	float GetWidth();
+	float GetHeight();
 
 	b2Vec2 GetVelocity();
 
