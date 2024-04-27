@@ -16,6 +16,7 @@ Magnet = {
 
     OnUpdate = function(self)
         if Input.GetMousePosition().x >= self.left and Input.GetMousePosition().x <= self.right and Input.GetMousePosition().y >= self.up and Input.GetMousePosition().y <= self.bottom then
+            --Debug.Log(Actor:Find("compass").GetName())
             if Input.GetMouseButtonDown(1) then
                 self.active = not self.active
             end
