@@ -11,6 +11,25 @@ SpriteRenderer = {
 	end,
 
 	OnUpdate = function(self)
+		local magnet = self.actor:GetComponent("Magnet")
+		if magnet ~= nil then
+			if self.sprite == "box1" then
+				if magnet.active == true then
+					self.b = 255
+				end
+				if magnet.active == false then
+					self.b = 200
+				end
+			end
+			if self.sprite == "box2" then
+				if magnet.active == true then
+					self.r = 255
+				end
+				if magnet.active == false then
+					self.r = 200
+				end
+			end
+		end
 		local pos = self.rb:GetPosition()
 		local rot_degrees = self.rb:GetRotation()
 		local scale_x = self.rb:GetWidth()

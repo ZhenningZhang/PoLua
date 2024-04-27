@@ -813,6 +813,9 @@
 				"2": {
 					"type": "SpriteRenderer",
 					"sprite": "box2"
+				},
+				"3": {
+					"type": "Magnet"
 				}
 			}
 		},
@@ -831,6 +834,9 @@
 				"2": {
 					"type": "SpriteRenderer",
 					"sprite": "box2"
+				},
+				"3": {
+					"type": "Magnet"
 				}
 			}
 		},
@@ -876,6 +882,9 @@
 				},
 				"3": {
 					"type": "KeyboardControl"
+				},
+				"4": {
+					"type": "Raycast"
 				}
 			}
 		},
@@ -894,6 +903,9 @@
 				"2": {
 					"type": "SpriteRenderer",
 					"sprite": "box1"
+				},
+				"3": {
+					"type": "Magnet"
 				}
 			}
 		}

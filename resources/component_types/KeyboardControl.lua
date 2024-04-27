@@ -4,6 +4,7 @@ KeyboardControl = {
         self.frame = 0
         self.moving = false
         self.moveCoroutine = nil
+        self.status = 0
     end,
 
     UpdatePositionAndRotation = function(self, targetX, targetY, targetRotation, duration)
@@ -45,6 +46,7 @@ KeyboardControl = {
             self.frame = Application.GetFrame()
 
             if Input.GetKey("right") then
+                self.status = (self.status + 1) % 4
                 local posX = self.rb:GetPosition().x + 0.5
                 local posY = self.rb:GetPosition().y
                 local rotation = self.rb:GetRotation() + 90
@@ -56,6 +58,12 @@ KeyboardControl = {
             end
 
             if Input.GetKey("left") then
+                if self.status == 0 then
+                    self.status = 4
+                end
+                if self.status ~= 0 then
+                    self.status = (self.status - 1) % 4
+                end
                 local posX = self.rb:GetPosition().x - 0.5
                 local posY = self.rb:GetPosition().y
                 local rotation = self.rb:GetRotation() - 90
