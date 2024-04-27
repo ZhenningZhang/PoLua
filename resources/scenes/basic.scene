@@ -792,6 +792,9 @@
 				"2": {
 					"type": "SpriteRenderer",
 					"sprite": "box2"
+				},
+				"3": {
+					"type":  "Magnet"
 				}
 			}
 		},
