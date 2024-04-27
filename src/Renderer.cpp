@@ -130,3 +130,15 @@ void Renderer::RenderPixels()
 
 	draw_pixel_requests.clear();
 }
+
+glm::vec2 Renderer::WorldToScreen(glm::vec2 position)
+{
+	glm::vec2 result;
+
+	const int pixels_per_meter = 100;
+
+	result.x = static_cast<int>(position.x * pixels_per_meter + Config::x_resolution * 0.5f / Camera::zoom_factor);
+	result.y = static_cast<int>(position.y * pixels_per_meter + Config::y_resolution * 0.5f / Camera::zoom_factor);
+
+	return result;
+}

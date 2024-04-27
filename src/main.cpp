@@ -110,6 +110,7 @@ int main(int argc, char* argv[])
 		.addFunction("Sleep", &Sleep)
 		.addFunction("GetFrame", &GetFrame)
 		.addFunction("OpenURL", &OpenURL)
+		.addFunction("WorldToScreen", &Renderer::WorldToScreen)
 		.endNamespace();
 
 	luabridge::getGlobalNamespace(lua_state)
