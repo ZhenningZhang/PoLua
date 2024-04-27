@@ -28,6 +28,7 @@ public:
 	static void RenderImages();
 	static void RenderPixels();
 
+	static glm::vec2 WorldToScreen(glm::vec2 position);
 
 	Renderer() {
 		// Only need Config initialized
