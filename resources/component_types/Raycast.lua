@@ -105,12 +105,14 @@ Raycast = {
         if result ~= nil then
             local resultActor = result.actor
             local distance = Vector2.Distance(self.rb:GetPosition(), resultActor:GetComponent("Rigidbody"):GetPosition())
-            Debug.Log(distance)
             if distance < 0.6 then
                 self.leftMovable = false
             else
                 self.leftMovable = true
             end
+        end
+        if result == nil then
+            self.leftMovable = true
         end
     end,
 
@@ -119,12 +121,15 @@ Raycast = {
         if result ~= nil then
             local resultActor = result.actor
             local distance = Vector2.Distance(self.rb:GetPosition(), resultActor:GetComponent("Rigidbody"):GetPosition())
-            Debug.Log(distance)
             if distance < 0.6 then
                 self.rightMovable = false
-            else
+            end
+            if distance >= 0.6 then
                 self.rightMovable = true
             end
+        end
+        if result == nil then
+            self.rightMovable = true
         end
     end,
 
