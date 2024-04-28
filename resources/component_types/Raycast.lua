@@ -42,6 +42,9 @@ Raycast = {
                 if isRed == true then
                     if resultActor:GetComponent("SpriteRenderer").sprite == "box2" and resultActor:GetComponent("Magnet").active == true and self.moving == false and self.actor:GetComponent("KeyboardControl").moving == false then -- suppose to be true
                         local distance = Vector2.Distance(self.rb:GetPosition(), results[1].actor:GetComponent("Rigidbody"):GetPosition()) - 0.5
+                        if results[1].actor:GetComponent("Oneway") ~= nil then
+                            distance = Vector2.Distance(self.rb:GetPosition(), results[2].actor:GetComponent("Rigidbody"):GetPosition()) - 0.5
+                        end
                         local posX = self.rb:GetPosition().x + direc:__mul(distance).x
                         local posY = self.rb:GetPosition().y + direc:__mul(distance).y
                         local rotation = self.rb:GetRotation()
@@ -56,6 +59,9 @@ Raycast = {
                 if isRed == false then
                     if resultActor:GetComponent("SpriteRenderer").sprite == "box1" and resultActor:GetComponent("Magnet").active == true and self.moving == false and self.actor:GetComponent("KeyboardControl").moving == false then -- suppose to be true
                         local distance = Vector2.Distance(self.rb:GetPosition(), results[1].actor:GetComponent("Rigidbody"):GetPosition()) - 0.5
+                        if results[1].actor:GetComponent("Oneway") ~= nil then
+                            distance = Vector2.Distance(self.rb:GetPosition(), results[2].actor:GetComponent("Rigidbody"):GetPosition()) - 0.5
+                        end
                         local posX = self.rb:GetPosition().x + direc:__mul(distance).x
                         local posY = self.rb:GetPosition().y + direc:__mul(distance).y
                         local rotation = self.rb:GetRotation()

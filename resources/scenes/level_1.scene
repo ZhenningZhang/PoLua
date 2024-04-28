@@ -861,7 +861,7 @@
 					"sprite": "box2"
 				},
 				"3": {
-                    "next_scene": "basic",
+                    "next_scene": "level_2",
 					"type": "SceneSwitcher"
 				}
 			}

@@ -1,11 +1,11 @@
 Moving = {
     moving = false,
 
-    OnStart = function(self)
+    -- OnStart = function(self)
         
-    end,
+    -- end,
 
-    OnUpdate = function(self)
+    -- OnUpdate = function(self)
         
-    end
+    -- end
 }

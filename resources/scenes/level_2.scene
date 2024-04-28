@@ -409,8 +409,7 @@
 					"y": 1,
 					"width": 0.5,
 					"height": 0.5,
-					"has_trigger": false,
-					"has_collider": false
+					"has_trigger": false
 				},
 				"2": {
 					"r": 200,
@@ -418,6 +417,9 @@
 					"b": 200,
 					"type": "SpriteRenderer",
 					"sprite": "box1"
+				},
+				"3": {
+					"type": "Oneway"
 				}
 			}
 		},
@@ -797,6 +799,9 @@
 					"b": 200,
 					"type": "SpriteRenderer",
 					"sprite": "box1"
+				},
+				"3": {
+					"type": "Oneway"
 				}
 			}
 		},
