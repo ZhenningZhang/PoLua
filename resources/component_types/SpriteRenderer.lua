@@ -15,18 +15,26 @@ SpriteRenderer = {
 		if magnet ~= nil then
 			if self.sprite == "box1" then
 				if magnet.active == true then
+					self.r = 0
+					self.g = 102
 					self.b = 255
 				end
 				if magnet.active == false then
-					self.b = 200
+					self.r = 0
+					self.g = 0
+					self.b = 153
 				end
 			end
 			if self.sprite == "box2" then
 				if magnet.active == true then
 					self.r = 255
+					self.g = 80
+					self.b = 80
 				end
 				if magnet.active == false then
-					self.r = 200
+					self.r = 128
+					self.g = 0
+					self.b = 0
 				end
 			end
 		end

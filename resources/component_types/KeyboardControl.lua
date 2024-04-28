@@ -42,7 +42,7 @@ KeyboardControl = {
         end
 
         -- Only start new movements if no current coroutine is running
-        if Application.GetFrame() - self.frame >= 5 and not self.moving then
+        if Application.GetFrame() - self.frame >= 5 and not self.moving and self.actor:GetComponent("Raycast").floating == false then
             self.frame = Application.GetFrame()
 
             if Input.GetKey("right") then
@@ -53,7 +53,7 @@ KeyboardControl = {
 
                 self.moving = true
                 self.moveCoroutine = coroutine.create(function()
-                    self:UpdatePositionAndRotation(posX, posY, rotation, 1) -- 90 degrees in 1 second
+                    self:UpdatePositionAndRotation(posX, posY, rotation, 0.5) -- 90 degrees in 1 second
                 end)
             end
 
@@ -70,7 +70,7 @@ KeyboardControl = {
 
                 self.moving = true
                 self.moveCoroutine = coroutine.create(function()
-                    self:UpdatePositionAndRotation(posX, posY, rotation, 1) -- 90 degrees in 1 second
+                    self:UpdatePositionAndRotation(posX, posY, rotation, 0.5) -- 90 degrees in 1 second
                 end)
             end
         end

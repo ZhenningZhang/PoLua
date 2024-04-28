@@ -4,6 +4,7 @@ Raycast = {
         self.SpriteRenderer = self.actor:GetComponent("SpriteRenderer")
         self.rb = self.actor:GetComponent("Rigidbody")
         self.moving = false
+        self.floating = false
         self.moveCoroutine = nil
     end,
 
@@ -42,7 +43,7 @@ Raycast = {
                         local posX = self.rb:GetPosition().x + direc:__mul(distance).x
                         local posY = self.rb:GetPosition().y + direc:__mul(distance).y
                         local rotation = self.rb:GetRotation()
-                        local duration = distance / 0.5
+                        local duration = distance / 2
 
                         self.moving = true
                         self.moveCoroutine = coroutine.create(function()
@@ -56,7 +57,7 @@ Raycast = {
                         local posX = self.rb:GetPosition().x + direc:__mul(distance).x
                         local posY = self.rb:GetPosition().y + direc:__mul(distance).y
                         local rotation = self.rb:GetRotation()
-                        local duration = distance / 0.5
+                        local duration = distance / 2
 
                         self.moving = true
                         self.moveCoroutine = coroutine.create(function()
@@ -65,6 +66,30 @@ Raycast = {
                     end
                 end
             end
+        end
+    end,
+
+    RaycastDown = function(self)
+        local result = Physics.Raycast(self.rb:GetPosition(), Vector2(0,1), 100)
+        local resultActor = result.actor
+        local distance = Vector2.Distance(self.rb:GetPosition(), resultActor:GetComponent("Rigidbody"):GetPosition())
+        self.floating = true
+        if distance > 0.6 then
+            self.floating = true
+            if self.moving == false and self.actor:GetComponent("KeyboardControl").moving == false then
+                local posX = self.rb:GetPosition().x
+                local posY = resultActor:GetComponent("Rigidbody"):GetPosition().y - 0.5
+                local rotation = self.rb:GetRotation()
+                local duration = (distance - 0.5) / 2
+
+                self.moving = true
+                self.moveCoroutine = coroutine.create(function()
+                    self:UpdatePositionAndRotation(posX, posY, rotation, duration) -- 90 degrees in 1 second
+                end)
+            end
+        end
+        if distance <= 0.6 then
+            self.floating = false
         end
     end,
 
@@ -78,6 +103,7 @@ Raycast = {
         end
 
         local status = self.actor:GetComponent("KeyboardControl").status
+        self:RaycastDown()
         if status == 0 then
             self:RaycastByDirecAndColor(1, 0, true)
             self:RaycastByDirecAndColor(-1, 0, false)
