@@ -846,7 +846,7 @@
 				"1": {
 					"type": "Rigidbody",
 					"body_type": "static",
-					"x": -1,
+					"x": -1.5,
 					"y": -1.5,
 					"width": 0.5,
 					"height": 0.5,
@@ -861,7 +861,7 @@
 					"sprite": "box2"
 				},
 				"3": {
-                    "next_scene": "destination_test",
+                    "next_scene": "basic",
 					"type": "SceneSwitcher"
 				}
 			}
@@ -873,7 +873,7 @@
 					"type": "Rigidbody",
 					"collider_type": "circle",
 					"x": -2.5,
-					"y": -2,
+					"y": -2.5,
 					"rotation": 45,
 					"density": 1,
 					"width": 0.1,
