@@ -316,13 +316,34 @@
 			}
 		},
 		{
-			"name": "mid_low_22",
+			"name": "basement_37",
+			"components": {
+				"1": {
+					"type": "Rigidbody",
+					"body_type": "static",
+					"x": 0.5,
+					"y": 2,
+					"width": 0.5,
+					"height": 0.5,
+					"has_trigger": false
+				},
+				"2": {
+					"r": 0,
+					"g": 0,
+					"b": 0,
+					"type": "SpriteRenderer",
+					"sprite": "box2"
+				}
+			}
+		},
+		{
+			"name": "left_22",
 			"components": {
 				"1": {
 					"type": "Rigidbody",
 					"body_type": "static",
 					"x": -3.5,
-					"y": 1,
+					"y": 0.5,
 					"width": 0.5,
 					"height": 0.5,
 					"has_trigger": false
@@ -337,13 +358,13 @@
 			}
 		},
 		{
-			"name": "mid_low_23",
+			"name": "left_23",
 			"components": {
 				"1": {
 					"type": "Rigidbody",
 					"body_type": "static",
 					"x": -3,
-					"y": 1,
+					"y": 0.5,
 					"width": 0.5,
 					"height": 0.5,
 					"has_trigger": false
@@ -358,13 +379,13 @@
 			}
 		},
 		{
-			"name": "mid_low_24",
+			"name": "left_24",
 			"components": {
 				"1": {
 					"type": "Rigidbody",
 					"body_type": "static",
 					"x": -2.5,
-					"y": 1,
+					"y": 0.5,
 					"width": 0.5,
 					"height": 0.5,
 					"has_trigger": false
@@ -385,7 +406,7 @@
 					"type": "Rigidbody",
 					"body_type": "static",
 					"x": -2,
-					"y": 1,
+					"y": 1.5,
 					"width": 0.5,
 					"height": 0.5,
 					"has_trigger": false
@@ -406,20 +427,17 @@
 					"type": "Rigidbody",
 					"body_type": "static",
 					"x": -1.5,
-					"y": 1,
+					"y": 1.5,
 					"width": 0.5,
 					"height": 0.5,
 					"has_trigger": false
 				},
 				"2": {
-					"r": 200,
-					"g": 255,
-					"b": 200,
+					"r": 0,
+					"g": 0,
+					"b": 0,
 					"type": "SpriteRenderer",
-					"sprite": "box1"
-				},
-				"3": {
-					"type": "Oneway"
+					"sprite": "box2"
 				}
 			}
 		},
@@ -430,7 +448,7 @@
 					"type": "Rigidbody",
 					"body_type": "static",
 					"x": -1,
-					"y": 1,
+					"y": 1.5,
 					"width": 0.5,
 					"height": 0.5,
 					"has_trigger": false
@@ -451,17 +469,20 @@
 					"type": "Rigidbody",
 					"body_type": "static",
 					"x": -0.5,
-					"y": 1,
+					"y": 1.5,
 					"width": 0.5,
 					"height": 0.5,
 					"has_trigger": false
 				},
 				"2": {
-					"r": 0,
-					"g": 0,
-					"b": 0,
+					"r": 200,
+					"g": 255,
+					"b": 200,
 					"type": "SpriteRenderer",
-					"sprite": "box2"
+					"sprite": "box1"
+				},
+				"3": {
+					"type": "Oneway"
 				}
 			}
 		},
@@ -472,7 +493,7 @@
 					"type": "Rigidbody",
 					"body_type": "static",
 					"x": 0,
-					"y": 1,
+					"y": 1.5,
 					"width": 0.5,
 					"height": 0.5,
 					"has_trigger": false
@@ -493,7 +514,7 @@
 					"type": "Rigidbody",
 					"body_type": "static",
 					"x": 0.5,
-					"y": 1,
+					"y": 1.5,
 					"width": 0.5,
 					"height": 0.5,
 					"has_trigger": false
@@ -514,7 +535,7 @@
 					"type": "Rigidbody",
 					"body_type": "static",
 					"x": 1,
-					"y": 1,
+					"y": 1.5,
 					"width": 0.5,
 					"height": 0.5,
 					"has_trigger": false
@@ -535,17 +556,20 @@
 					"type": "Rigidbody",
 					"body_type": "static",
 					"x": 1.5,
-					"y": 1,
+					"y": 1.5,
 					"width": 0.5,
 					"height": 0.5,
 					"has_trigger": false
 				},
 				"2": {
-					"r": 0,
-					"g": 0,
-					"b": 0,
+					"r": 200,
+					"g": 255,
+					"b": 200,
 					"type": "SpriteRenderer",
-					"sprite": "box2"
+					"sprite": "box1"
+				},
+				"3": {
+					"type": "Oneway"
 				}
 			}
 		},
@@ -556,7 +580,7 @@
 					"type": "Rigidbody",
 					"body_type": "static",
 					"x": 2,
-					"y": 1,
+					"y": 1.5,
 					"width": 0.5,
 					"height": 0.5,
 					"has_trigger": false
@@ -577,91 +601,7 @@
 					"type": "Rigidbody",
 					"body_type": "static",
 					"x": 2.5,
-					"y": 1,
-					"width": 0.5,
-					"height": 0.5,
-					"has_trigger": false
-				},
-				"2": {
-					"r": 0,
-					"g": 0,
-					"b": 0,
-					"type": "SpriteRenderer",
-					"sprite": "box2"
-				}
-			}
-		},
-		{
-			"name": "mid_low_35",
-			"components": {
-				"1": {
-					"type": "Rigidbody",
-					"body_type": "static",
-					"x": 3,
-					"y": 1,
-					"width": 0.5,
-					"height": 0.5,
-					"has_trigger": false
-				},
-				"2": {
-					"r": 0,
-					"g": 0,
-					"b": 0,
-					"type": "SpriteRenderer",
-					"sprite": "box2"
-				}
-			}
-		},
-				{
-			"name": "mid_upper_22",
-			"components": {
-				"1": {
-					"type": "Rigidbody",
-					"body_type": "static",
-					"x": -3.5,
-					"y": -0.5,
-					"width": 0.5,
-					"height": 0.5,
-					"has_trigger": false
-				},
-				"2": {
-					"r": 0,
-					"g": 0,
-					"b": 0,
-					"type": "SpriteRenderer",
-					"sprite": "box2"
-				}
-			}
-		},
-		{
-			"name": "mid_upper_23",
-			"components": {
-				"1": {
-					"type": "Rigidbody",
-					"body_type": "static",
-					"x": -3,
-					"y": -0.5,
-					"width": 0.5,
-					"height": 0.5,
-					"has_trigger": false
-				},
-				"2": {
-					"r": 0,
-					"g": 0,
-					"b": 0,
-					"type": "SpriteRenderer",
-					"sprite": "box2"
-				}
-			}
-		},
-		{
-			"name": "mid_upper_24",
-			"components": {
-				"1": {
-					"type": "Rigidbody",
-					"body_type": "static",
-					"x": -2.5,
-					"y": -0.5,
+					"y": 1.5,
 					"width": 0.5,
 					"height": 0.5,
 					"has_trigger": false
@@ -682,7 +622,28 @@
 					"type": "Rigidbody",
 					"body_type": "static",
 					"x": -2,
-					"y": -0.5,
+					"y": -1,
+					"width": 0.5,
+					"height": 0.5,
+					"has_trigger": false
+				},
+				"2": {
+					"r": 0,
+					"g": 0,
+					"b": 0,
+					"type": "SpriteRenderer",
+					"sprite": "box2"
+				}
+			}
+		},
+		{
+			"name": "mid_upper_26",
+			"components": {
+				"1": {
+					"type": "Rigidbody",
+					"body_type": "static",
+					"x": -1.5,
+					"y": -1,
 					"width": 0.5,
 					"height": 0.5,
 					"has_trigger": false
@@ -703,7 +664,7 @@
 					"type": "Rigidbody",
 					"body_type": "static",
 					"x": -1,
-					"y": -0.5,
+					"y": -1,
 					"width": 0.5,
 					"height": 0.5,
 					"has_trigger": false
@@ -724,7 +685,7 @@
 					"type": "Rigidbody",
 					"body_type": "static",
 					"x": -0.5,
-					"y": -0.5,
+					"y": -1,
 					"width": 0.5,
 					"height": 0.5,
 					"has_trigger": false
@@ -745,7 +706,7 @@
 					"type": "Rigidbody",
 					"body_type": "static",
 					"x": 0,
-					"y": -0.5,
+					"y": -1,
 					"width": 0.5,
 					"height": 0.5,
 					"has_trigger": false
@@ -766,7 +727,7 @@
 					"type": "Rigidbody",
 					"body_type": "static",
 					"x": 0.5,
-					"y": -0.5,
+					"y": -1,
 					"width": 0.5,
 					"height": 0.5,
 					"has_trigger": false
@@ -787,7 +748,28 @@
 					"type": "Rigidbody",
 					"body_type": "static",
 					"x": 1,
-					"y": -0.5,
+					"y": -1,
+					"width": 0.5,
+					"height": 0.5,
+					"has_trigger": false
+				},
+				"2": {
+					"r": 0,
+					"g": 0,
+					"b": 0,
+					"type": "SpriteRenderer",
+					"sprite": "box2"
+				}
+			}
+		},
+		{
+			"name": "mid_upper_32",
+			"components": {
+				"1": {
+					"type": "Rigidbody",
+					"body_type": "static",
+					"x": 1.5,
+					"y": -1,
 					"width": 0.5,
 					"height": 0.5,
 					"has_trigger": false
@@ -805,34 +787,13 @@
 			}
 		},
 		{
-			"name": "mid_upper_32",
-			"components": {
-				"1": {
-					"type": "Rigidbody",
-					"body_type": "static",
-					"x": 1.5,
-					"y": -0.5,
-					"width": 0.5,
-					"height": 0.5,
-					"has_trigger": false
-				},
-				"2": {
-					"r": 0,
-					"g": 0,
-					"b": 0,
-					"type": "SpriteRenderer",
-					"sprite": "box2"
-				}
-			}
-		},
-		{
 			"name": "mid_upper_33",
 			"components": {
 				"1": {
 					"type": "Rigidbody",
 					"body_type": "static",
 					"x": 2,
-					"y": -0.5,
+					"y": -1,
 					"width": 0.5,
 					"height": 0.5,
 					"has_trigger": false
@@ -853,7 +814,7 @@
 					"type": "Rigidbody",
 					"body_type": "static",
 					"x": 2.5,
-					"y": -0.5,
+					"y": -1,
 					"width": 0.5,
 					"height": 0.5,
 					"has_trigger": false
@@ -868,13 +829,13 @@
 			}
 		},
 		{
-			"name": "mid_upper_35",
+			"name": "mid_upper_34",
 			"components": {
 				"1": {
 					"type": "Rigidbody",
 					"body_type": "static",
-					"x": 3,
-					"y": -0.5,
+					"x": 2.5,
+					"y": -2,
 					"width": 0.5,
 					"height": 0.5,
 					"has_trigger": false
@@ -889,13 +850,13 @@
 			}
 		},
 		{
-			"name": "right_1",
+			"name": "mid_upper_34",
 			"components": {
 				"1": {
 					"type": "Rigidbody",
 					"body_type": "static",
-					"x": 3,
-					"y": 0,
+					"x": 2.5,
+					"y": -2.5,
 					"width": 0.5,
 					"height": 0.5,
 					"has_trigger": false
@@ -915,8 +876,8 @@
 				"1": {
 					"type": "Rigidbody",
 					"body_type": "static",
-					"x": 1,
-					"y": -2,
+					"x": 1.5,
+					"y": -2.5,
 					"width": 0.5,
 					"height": 0.5,
 					"has_trigger": false
@@ -936,8 +897,8 @@
 				"1": {
 					"type": "Rigidbody",
 					"body_type": "static",
-					"x": -3.5,
-					"y": 2,
+					"x": 3.5,
+					"y": 0,
 					"width": 0.5,
 					"height": 0.5,
 					"has_trigger": false
@@ -947,7 +908,7 @@
 					"sprite": "box2"
 				},
 				"3": {
-					"type": "Magnet"
+					"type":  "Magnet"
 				}
 			}
 		},
@@ -957,8 +918,8 @@
 				"1": {
 					"type": "Rigidbody",
 					"body_type": "static",
-					"x": -0.5,
-					"y": -1,
+					"x": 3,
+					"y": 0,
 					"width": 0.5,
 					"height": 0.5,
 					"has_trigger": false,
@@ -972,7 +933,6 @@
 					"sprite": "box2"
 				},
 				"3": {
-					"next_scene": "level_3",
 					"type": "SceneSwitcher"
 				}
 			}
@@ -984,7 +944,7 @@
 					"type": "Rigidbody",
 					"collider_type": "circle",
 					"x": -1.5,
-					"y": 1.5,
+					"y": 2,
 					"rotation": 45,
 					"density": 1,
 					"width": 0.1,
@@ -1010,8 +970,8 @@
 				"1": {
 					"type": "Rigidbody",
 					"body_type": "static",
-					"x": -1.5,
-					"y": -0.5,
+					"x": -3.5,
+					"y": 2,
 					"width": 0.5,
 					"height": 0.5,
 					"has_trigger": false
@@ -1031,8 +991,50 @@
 				"1": {
 					"type": "Rigidbody",
 					"body_type": "static",
-					"x": 3,
-					"y": 0.5,
+					"x": 3.5,
+					"y": 2,
+					"width": 0.5,
+					"height": 0.5,
+					"has_trigger": false
+				},
+				"2": {
+					"type": "SpriteRenderer",
+					"sprite": "box1"
+				},
+				"3": {
+					"type": "Magnet"
+				}
+			}
+		},
+		{
+			"name": "blue_tile_2",
+			"components": {
+				"1": {
+					"type": "Rigidbody",
+					"body_type": "static",
+					"x": -0.5,
+					"y": -0.5,
+					"width": 0.5,
+					"height": 0.5,
+					"has_trigger": false
+				},
+				"2": {
+					"type": "SpriteRenderer",
+					"sprite": "box1"
+				},
+				"3": {
+					"type": "Magnet"
+				}
+			}
+		},
+		{
+			"name": "blue_tile_3",
+			"components": {
+				"1": {
+					"type": "Rigidbody",
+					"body_type": "static",
+					"x": 2.5,
+					"y": -1.5,
 					"width": 0.5,
 					"height": 0.5,
 					"has_trigger": false
