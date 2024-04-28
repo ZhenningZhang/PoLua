@@ -45,7 +45,7 @@ KeyboardControl = {
         if Application.GetFrame() - self.frame >= 5 and not self.moving and self.actor:GetComponent("Raycast").floating == false then
             self.frame = Application.GetFrame()
 
-            if Input.GetKey("right") then
+            if Input.GetKey("right") and self.actor:GetComponent("Raycast").rightMovable == true then
                 self.status = (self.status + 1) % 4
                 local posX = self.rb:GetPosition().x + 0.5
                 local posY = self.rb:GetPosition().y
@@ -57,7 +57,7 @@ KeyboardControl = {
                 end)
             end
 
-            if Input.GetKey("left") then
+            if Input.GetKey("left") and self.actor:GetComponent("Raycast").leftMovable == true then
                 if self.status == 0 then
                     self.status = 4
                 end

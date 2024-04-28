@@ -6,6 +6,8 @@ Raycast = {
         self.moving = false
         self.floating = false
         self.moveCoroutine = nil
+        self.leftMovable = true
+        self.rightMovable = true
     end,
 
     UpdatePositionAndRotation = function(self, targetX, targetY, targetRotation, duration)
@@ -73,7 +75,6 @@ Raycast = {
         local result = Physics.Raycast(self.rb:GetPosition(), Vector2(0,1), 100)
         local resultActor = result.actor
         local distance = Vector2.Distance(self.rb:GetPosition(), resultActor:GetComponent("Rigidbody"):GetPosition())
-        self.floating = true
         if distance > 0.6 then
             self.floating = true
             if self.moving == false and self.actor:GetComponent("KeyboardControl").moving == false then
@@ -93,6 +94,34 @@ Raycast = {
         end
     end,
 
+    RaycastLeft = function(self)
+        local result = Physics.Raycast(self.rb:GetPosition(), Vector2(-1,0), 100)
+        if result ~= nil then
+            local resultActor = result.actor
+            local distance = Vector2.Distance(self.rb:GetPosition(), resultActor:GetComponent("Rigidbody"):GetPosition())
+            Debug.Log(distance)
+            if distance < 0.6 then
+                self.leftMovable = false
+            else
+                self.leftMovable = true
+            end
+        end
+    end,
+
+    RaycastRight = function(self)
+        local result = Physics.Raycast(self.rb:GetPosition(), Vector2(1,0), 100)
+        if result ~= nil then
+            local resultActor = result.actor
+            local distance = Vector2.Distance(self.rb:GetPosition(), resultActor:GetComponent("Rigidbody"):GetPosition())
+            Debug.Log(distance)
+            if distance < 0.6 then
+                self.rightMovable = false
+            else
+                self.rightMovable = true
+            end
+        end
+    end,
+
     OnUpdate = function(self)
         if self.moving and self.moveCoroutine then
             local status, error = coroutine.resume(self.moveCoroutine)
@@ -104,6 +133,8 @@ Raycast = {
 
         local status = self.actor:GetComponent("KeyboardControl").status
         self:RaycastDown()
+        self:RaycastLeft()
+        self:RaycastRight()
         if status == 0 then
             self:RaycastByDirecAndColor(1, 0, true)
             self:RaycastByDirecAndColor(-1, 0, false)
