@@ -972,7 +972,6 @@
 					"sprite": "box2"
 				},
 				"3": {
-                    "next_scene": "basic",
 					"type": "SceneSwitcher"
 				}
 			}

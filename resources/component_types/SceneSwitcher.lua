@@ -9,7 +9,11 @@ SceneSwitcher = {
 
     OnUpdate = function(self)
         if Vector2.Distance(self.rb:GetPosition(), self.compass:GetPosition()) < 0.01 then
-            Scene.Load(self.next_scene)
+            if self.next_scene ~= "" then
+                Scene.Load(self.next_scene)
+            else
+                Application.Quit()
+            end
         end
     end
     
