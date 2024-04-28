@@ -790,8 +790,7 @@
 					"y": -0.5,
 					"width": 0.5,
 					"height": 0.5,
-					"has_trigger": false,
-					"has_collider": false
+					"has_trigger": false
 				},
 				"2": {
 					"r": 200,
